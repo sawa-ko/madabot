@@ -1,0 +1,71 @@
+{
+  "name": "madabot",
+  "version": "1.0.0",
+  "description": "A damn pretty nice bot for @ madaban7",
+  "main": "src/main.ts",
+  "repository": "https://bitbucket.org/kodachi-team/madabot",
+  "author": "@sawako__",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "build:start": "tsc -p tsconfig.json && node dist/main.js",
+    "start:prod": "echo Starting Discord bot @madabot... && node dist/main.js",
+    "start:dev": "ts-node src/main.ts",
+    "dev:watch": "nodemon",
+    "dev:lint": "tsc --noEmit && eslint './src/*.{js,ts}' --quiet --fix"
+  },
+  "dependencies": {
+    "@typeit/discord": "^3.0.2",
+    "class-validator": "^0.12.2",
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0",
+    "logdc": "^2.0.2",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.5"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "^13.13.5",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.31.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "nodemon": "^2.0.3",
+    "prettier": "^2.0.5",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.8.3"
+  },
+  "logdcConfig": {
+    "labels": {
+      "success": {
+        "color": "green",
+        "text": "[SUCCESS]"
+      },
+      "warn": {
+        "color": "yellow",
+        "text": "[WARNING]"
+      },
+      "error": {
+        "color": "red",
+        "text": "[ERROR]"
+      },
+      "log": {
+        "color": "white",
+        "text": "[LOG]"
+      },
+      "info": {
+        "color": "white",
+        "text": "[INFO]"
+      },
+      "br": {
+        "color": "grey",
+        "text": "="
+      }
+    },
+    "time": true,
+    "counter": 6,
+    "equal": true
+  }
+}
