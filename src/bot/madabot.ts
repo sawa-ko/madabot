@@ -1,11 +1,9 @@
 import { Discord, CommandNotFound, CommandMessage } from '@typeit/discord';
 import { join } from 'path';
 
-import { Help } from '../commands';
-
 @Discord({
   prefix: '-m',
-  importCommands: [join(__dirname, '..', 'commands', '*.ts'), Help],
+  importCommands: [join(__dirname, '..', 'commands', '*.ts')],
 })
 export class DiscordApp {
   @CommandNotFound({ prefix: '-m' })
