@@ -23,6 +23,8 @@ export class Main {
         logger.br();
         logger.info(Client.getCommands());
         logger.br();
+        logger.success('Ya puedes usarme Bro, buen provecho.');
+        logger.br();
       })
       .catch((error) => {
         logger.error(
